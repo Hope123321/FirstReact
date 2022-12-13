@@ -27,21 +27,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp_Bak\src\components\counter.tsx" />
-    <None Remove="ClientApp_Bak\src\pages\home.tsx" />
+    <Content Remove="ClientApp_Bak\package-lock.json" />
+    <Content Remove="ClientApp_Bak\package.json" />
+    <Content Remove="ClientApp_Bak\public\manifest.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="ClientApp_Bak\package-lock.json" />
-    <None Include="ClientApp_Bak\package.json" />
-    <None Include="ClientApp_Bak\public\manifest.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="ClientApp_Bak\src\pages\home.tsx">
-      <SubType>Code</SubType>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="ClientApp_Bak\src\pages\counter.tsx" />
+    <None Include="ClientApp_Bak\package-lock.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="ClientApp_Bak\package.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="ClientApp_Bak\public\manifest.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
