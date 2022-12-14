@@ -21,8 +21,12 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="clientapp\build\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="clientapp\build\**" />
+    <EmbeddedResource Remove="clientapp\build\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="clientapp\build\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
@@ -30,6 +34,26 @@
     <Content Remove="ClientApp_Bak\package-lock.json" />
     <Content Remove="ClientApp_Bak\package.json" />
     <Content Remove="ClientApp_Bak\public\manifest.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="clientapp\build\asset-manifest.json" />
+    <None Remove="clientapp\build\favicon.ico" />
+    <None Remove="clientapp\build\index.html" />
+    <None Remove="clientapp\build\logo192.png" />
+    <None Remove="clientapp\build\logo512.png" />
+    <None Remove="clientapp\build\manifest.json" />
+    <None Remove="clientapp\build\robots.txt" />
+    <None Remove="clientapp\build\static\css\main.073c9b0a.css" />
+    <None Remove="clientapp\build\static\css\main.073c9b0a.css.map" />
+    <None Remove="clientapp\build\static\js\787.b6fd2ddb.chunk.js" />
+    <None Remove="clientapp\build\static\js\787.b6fd2ddb.chunk.js.map" />
+    <None Remove="clientapp\build\static\js\main.b2b6ca85.js" />
+    <None Remove="clientapp\build\static\js\main.b2b6ca85.js.LICENSE.txt" />
+    <None Remove="clientapp\build\static\js\main.b2b6ca85.js.map" />
+    <None Remove="clientapp\build\static\media\logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg" />
+    <None Remove="clientapp\src\pages\About.tsx" />
+    <None Remove="clientapp\src\pages\Home.tsx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +66,19 @@
     <None Include="ClientApp_Bak\public\manifest.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="clientapp\src\components\" />
+    <Folder Include="clientapp\src\models\" />
+    <Folder Include="clientapp\src\contexts\" />
+    <Folder Include="clientapp\src\stores\" />
+    <Folder Include="clientapp\src\services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="clientapp\src\pages\About.tsx" />
+    <TypeScriptCompile Include="clientapp\src\pages\Home.tsx" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
