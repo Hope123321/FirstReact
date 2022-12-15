@@ -21,17 +21,23 @@ namespace FirstReact.Controllers
         [HttpPost]
         public string SignIn(SignInRequestViewModel source)
         {
-            string ret = "";
+            BasicResponseViewModel ret=new BasicResponseViewModel();
             if (
-                source!=null 
+                source != null
                 && !string.IsNullOrEmpty(source.Account)
                 && !string.IsNullOrEmpty(source.Password)
-                ) {
+                )
+            {
 
-                SignInResponseViewModel res = new(_jwt.GenerateToken(source.Account));
-                ret = JsonSerializer.Serialize(res);
+                SignInResponseViewModel res = new("sa", "管理者", _jwt.GenerateToken(source.Account));
+                ret.ResponseNo = "0000";
+                ret.ResponseData = res;
             }
-            return ret;
+            else {
+                ret.ResponseNo = "9999";
+                ret.ResponseNa = "輸入資料不正確!";
+            }
+            return JsonSerializer.Serialize(ret);
         }
 
     }

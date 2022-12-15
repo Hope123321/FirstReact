@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using FirstReact.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace FirstReact.Controllers
 {
@@ -21,15 +23,21 @@ namespace FirstReact.Controllers
 
         [Authorize]
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public string Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            var list= Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+
+            BasicResponseViewModel res = new BasicResponseViewModel();
+            res.ResponseNo = "0000";
+            res.ResponseData = list;
+
+            return JsonSerializer.Serialize(res);
         }
 
         [HttpGet]
