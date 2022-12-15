@@ -1,2 +1,15 @@
 # FirstReact
-[教學文章](https://jonathanchenblog.blogspot.com/2022/12/reactnet-6-react-typescript.html)
+### 前言
+>使用.NET 6 WebAPI + React + TypeScript就可以建立一個簡易的網站。
+
+### 教學連結
+* 教學文章
+  * [[React]第1篇.專案開發教學(.Net 6 + React + TypeScript)](https://jonathanchenblog.blogspot.com/2022/12/reactnet-6-react-typescript.html)
+  * [[React]第2篇.專案結構說明](https://jonathanchenblog.blogspot.com/2022/12/react2net-6-react-typescript.html)
+  * [[React]第3篇.React開發-mui導覽列&路由設定](https://jonathanchenblog.blogspot.com/2022/12/react3react-mui.html)
+  * [[React]第4篇.API驗證機制實作說明](https://jonathanchenblog.blogspot.com/2022/12/react4api.html)
+  
+### 聯絡我
+>**JonathanChen** 
+>**0930748810**
+
