@@ -6,14 +6,14 @@ namespace FirstReact.Models
         /// <summary>
         /// 回傳代碼
         /// </summary>
-        public string ResponseNo { get; set; }
+        public string? ResponseNo { get; set; }
         /// <summary>
         /// 回傳訊息
         /// </summary>
-        public string ResponseNa { get; set; }
+        public string? ResponseNa { get; set; }
         /// <summary>
         /// 回傳內容
         /// </summary>
-        public object ResponseData { get; set; }
+        public object? ResponseData { get; set; }
     }
 }
