@@ -51,7 +51,7 @@ export default function Login() {
         // #region 登入作業
             let res: BasicResponse = await login(values.account, values.password, values.remember);
             console.log(res);
-        if (res.ResponseNo == '0000') {
+        if (res.ResponseNo === '0000') {
             const resData: any = res.ResponseData;
             if (resData.Token) {
                 let user: User = { UserNo: resData.UserNo, UserNa: resData.UserNa, Token: resData.Token };

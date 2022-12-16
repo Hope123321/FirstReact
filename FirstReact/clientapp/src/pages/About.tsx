@@ -14,7 +14,7 @@ export function About() {
     const GetList = async () => {
         let res = await GetByAuth("/api/WeatherForecast/get");
         console.log(res);
-        if (res.ResponseNo == "0000") {
+        if (res.ResponseNo === "0000") {
             setList(JSON.stringify(res.ResponseData));
         } else {
             alert(res.ResponseNa);

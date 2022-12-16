@@ -23,7 +23,7 @@ export const GetByAuth = async (url: string) => {
     let data:BasicResponse|null=null;
     console.log(response);
     if(response.status !== 401){
-	    data = <BasicResponse>(await response.json());
+        data = (await response.json() as BasicResponse);
     }
     else{
         data={
@@ -51,7 +51,7 @@ export const PostByAuth = async (url: string,source:object) => {
     let data:BasicResponse|null=null;
     console.log(response);
     if(response.status !== 401){
-	    data = <BasicResponse>(await response.json());
+        data = (await response.json() as BasicResponse);
     }
     else{
         data={
