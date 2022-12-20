@@ -152,7 +152,7 @@ export default function Login() {
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                    <Link href="#" variant="body2" onClick={() => { i18n.changeLanguage(i18n.language=="en"?"zh":"en") }}>
+                                    <Link href="#" variant="body2" onClick={() => { i18n.changeLanguage(i18n.language==="en"?"zh":"en") }}>
                                         {t('SwitchLan')}
                                     </Link>
                                 </Grid>
