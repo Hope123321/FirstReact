@@ -1,0 +1,14 @@
+{
+  "SwitchLan": "切換語言",
+  "Welcome": "歡迎!",
+  "Login": {
+    "SignIn": "登入",
+    "Account": "帳號",
+    "Password": "密碼",
+    "Remember": "記住我",
+    "ForgetPassword": "忘記密碼?"
+  },
+  "Home": {
+    "Name": "首頁"
+  }
+}

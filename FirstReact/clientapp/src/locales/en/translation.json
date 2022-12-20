@@ -1,0 +1,14 @@
+{
+  "SwitchLan": "Switch Language",
+  "Welcome": "Weclome!",
+  "Login": {
+    "SignIn": "Sign in",
+    "Account": "Account",
+    "Password": "Password",
+    "Remember": "Remember me",
+    "ForgetPassword": "Forgot password?"
+  },
+  "Home": {
+    "Name": "Home Page"
+  }
+}

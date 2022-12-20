@@ -53,8 +53,10 @@
     <None Remove="clientapp\build\static\js\main.b2b6ca85.js.LICENSE.txt" />
     <None Remove="clientapp\build\static\js\main.b2b6ca85.js.map" />
     <None Remove="clientapp\build\static\media\logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg" />
+    <None Remove="clientapp\i18n.js" />
     <None Remove="clientapp\src\components\Loading.tsx" />
     <None Remove="clientapp\src\components\SimpleBackdrop.tsx" />
+    <None Remove="clientapp\src\i18n.ts" />
     <None Remove="clientapp\src\models\login\SignIn.d.ts" />
     <None Remove="clientapp\src\models\_common\basicHttp.d.ts" />
     <None Remove="clientapp\src\models\_common\user.d.ts" />
@@ -83,6 +85,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="clientapp\src\i18n.ts" />
     <TypeScriptCompile Include="clientapp\src\components\Loading.tsx" />
     <TypeScriptCompile Include="clientapp\src\components\SimpleBackdrop.tsx" />
     <TypeScriptCompile Include="clientapp\src\models\login\SignIn.d.ts">
@@ -123,4 +126,6 @@
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 </Project>

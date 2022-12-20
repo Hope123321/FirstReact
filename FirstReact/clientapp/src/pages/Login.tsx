@@ -17,6 +17,7 @@ import { BasicResponse } from '../models/_common/basicHttp';
 import { login } from '../services/AuthService';
 import { User } from '../models/_common/user';
 import UserContext from '../contexts/UserContext';
+import { useTranslation } from 'react-i18next';
 
 function Copyright(props: any) {
     return (
@@ -71,6 +72,8 @@ export default function Login() {
         }
         
     };
+    //i18n
+    const { t,i18n } = useTranslation();
 
     return (
         <ThemeProvider theme={theme}>
@@ -104,7 +107,7 @@ export default function Login() {
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5">
-                            Sign in
+                            {t('Login.SignIn')}
                         </Typography>
                         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
                             <TextField
@@ -113,7 +116,7 @@ export default function Login() {
                                 required
                                 fullWidth
                                 id="account"
-                                label="Account"
+                                label={t('Login.Account')}
                                 name="account"
                                 autoFocus
                             />
@@ -123,7 +126,7 @@ export default function Login() {
                                 required
                                 fullWidth
                                 name="password"
-                                label="Password"
+                                label={t('Login.Password')}
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
@@ -131,7 +134,7 @@ export default function Login() {
                             />
                             <FormControlLabel
                                 control={<Checkbox  value="remember" color="primary" />}
-                                label="Remember me"
+                                label={t('Login.Remember')}
                                 name="remember"
                             />
                             <Button
@@ -140,19 +143,19 @@ export default function Login() {
                                 variant="contained"
                                 sx={{ mt: 3, mb: 2 }}
                             >
-                                Sign In
+                                {t('Login.SignIn')}
                             </Button>
                             <Grid container>
                                 <Grid item xs>
                                     <Link href="#" variant="body2">
-                                        Forgot password?
+                                        {t('Login.ForgetPassword')}
                                     </Link>
                                 </Grid>
-                                {/* <Grid item>
-                                    <Link href="#" variant="body2">
-                                        {"Don't have an account? Sign Up"}
+                                <Grid item>
+                                    <Link href="#" variant="body2" onClick={() => { i18n.changeLanguage(i18n.language=="en"?"zh":"en") }}>
+                                        {t('SwitchLan')}
                                     </Link>
-                                </Grid> */}
+                                </Grid>
                             </Grid>
                             <Copyright sx={{ mt: 5 }} />
                         </Box>
@@ -162,3 +165,4 @@ export default function Login() {
         </ThemeProvider>
     );
 }
+
