@@ -28,8 +28,6 @@ export const UserProvider = ({ children }: Props) => {
 
     // 當值變更執行
     useEffect(() => {
-      console.log("currentUser=");
-      console.log(currentUser);
 
       // 登出
       if (!currentUser) {
