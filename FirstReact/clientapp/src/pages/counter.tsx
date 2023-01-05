@@ -1,4 +1,4 @@
-﻿import * as React from 'react';
+import * as React from 'react';
 import { useEffect } from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import { countMinus, countPlus } from '../reducers/counter';
