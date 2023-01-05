@@ -61,7 +61,10 @@
     <None Remove="clientapp\src\models\_common\basicHttp.d.ts" />
     <None Remove="clientapp\src\models\_common\user.d.ts" />
     <None Remove="clientapp\src\pages\About.tsx" />
+    <None Remove="clientapp\src\pages\counter.tsx" />
     <None Remove="clientapp\src\pages\Home.tsx" />
+    <None Remove="clientapp\src\reducers\counter.ts" />
+    <None Remove="clientapp\src\stores\configureStore.ts" />
     <None Remove="clientapp\src\test\example.test.tsx" />
     <None Remove="clientapp\src\test\utillitys\test-utils.tsx" />
   </ItemGroup>
@@ -80,7 +83,6 @@
 
   <ItemGroup>
     <Folder Include="clientapp\src\contexts\" />
-    <Folder Include="clientapp\src\stores\" />
     <Folder Include="clientapp\src\services\" />
   </ItemGroup>
 
@@ -96,7 +98,10 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="clientapp\src\models\_common\basicHttp.d.ts" />
     <TypeScriptCompile Include="clientapp\src\pages\About.tsx" />
+    <TypeScriptCompile Include="clientapp\src\pages\counter.tsx" />
     <TypeScriptCompile Include="clientapp\src\pages\Home.tsx" />
+    <TypeScriptCompile Include="clientapp\src\reducers\counter.ts" />
+    <TypeScriptCompile Include="clientapp\src\stores\configureStore.ts" />
     <TypeScriptCompile Include="clientapp\src\test\example.test.tsx" />
     <TypeScriptCompile Include="clientapp\src\test\utillitys\test-utils.tsx" />
   </ItemGroup>

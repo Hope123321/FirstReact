@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import MenuIcon from '@mui/icons-material/Menu';
 import { UserProvider } from "./contexts/UserContext";
+import { Counter } from "./pages/counter";
 
 function App() {
     return (
@@ -41,6 +42,12 @@ function App() {
                                     color: "white"
                                 }}>About</Link>
                             </Button>
+
+                            <Button color="inherit">
+                                <Link to="/Counter" style={{
+                                    color: "white"
+                                }}>Counter</Link>
+                            </Button>
                         </Toolbar>
                     </AppBar>
                     <Box component="main" sx={{ flexGrow: 1, p: 3, pt: 5, }}>
@@ -49,6 +56,7 @@ function App() {
                             {/* pages */}
                             <Route path="/" element={<Home />} />
                             <Route path="/About" element={<About />} />
+                            <Route path="/Counter" element={<Counter />} />
                         </Routes>
                     </Box>
                     </Box>
