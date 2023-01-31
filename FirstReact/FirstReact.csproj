@@ -56,6 +56,7 @@
     <None Remove="clientapp\i18n.js" />
     <None Remove="clientapp\src\components\Loading.tsx" />
     <None Remove="clientapp\src\components\SimpleBackdrop.tsx" />
+    <None Remove="clientapp\src\components\text\Password.tsx" />
     <None Remove="clientapp\src\i18n.ts" />
     <None Remove="clientapp\src\models\login\SignIn.d.ts" />
     <None Remove="clientapp\src\models\_common\basicHttp.d.ts" />
@@ -87,6 +88,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="clientapp\src\components\text\Password.tsx" />
     <TypeScriptCompile Include="clientapp\src\i18n.ts" />
     <TypeScriptCompile Include="clientapp\src\components\Loading.tsx" />
     <TypeScriptCompile Include="clientapp\src\components\SimpleBackdrop.tsx" />

@@ -12,7 +12,8 @@
   * [[React]第6篇.環境佈署](https://jonathanchenblog.blogspot.com/2022/12/react6.html)
   * [[React]第7篇.用 react-i18next 實現多國語言](https://jonathanchenblog.blogspot.com/2022/12/react7-react-i18next.html)
   * [[React]第8篇.Redux說明&導入](https://jonathanchenblog.blogspot.com/2023/01/react8redux.html)
-  
+  * [[React]9.實作自定義的Component(密碼輸入框)](https://jonathanchenblog.blogspot.com/2023/01/react9component.html)
+
 ### 聯絡我
 >**JonathanChen** 
 >**0930748810**

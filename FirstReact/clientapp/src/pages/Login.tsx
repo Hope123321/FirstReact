@@ -18,6 +18,7 @@ import { login } from '../services/AuthService';
 import { User } from '../models/_common/user';
 import UserContext from '../contexts/UserContext';
 import { useTranslation } from 'react-i18next';
+import Password from '../components/text/Password';
 
 function Copyright(props: any) {
     return (
@@ -48,6 +49,8 @@ export default function Login() {
             password: data.get('password'),
             remember: data.get('remember')?true:false,
         };
+        console.log("Request Data");
+        console.log(values);
         try{
         // #region 登入作業
             let res: BasicResponse = await login(values.account, values.password, values.remember);
@@ -120,18 +123,19 @@ export default function Login() {
                                 name="account"
                                 autoFocus
                             />
-                            <TextField
-                                error={LoginMsg !== ''}
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="password"
-                                label={t('Login.Password')}
-                                type="password"
-                                id="password"
-                                autoComplete="current-password"
-                                helperText={LoginMsg !== '' ? LoginMsg:""}
-                            />
+                            {/*<TextField*/}
+                            {/*    error={LoginMsg !== ''}*/}
+                            {/*    margin="normal"*/}
+                            {/*    required*/}
+                            {/*    fullWidth*/}
+                            {/*    name="password"*/}
+                            {/*    label={t('Login.Password')}*/}
+                            {/*    type="password"*/}
+                            {/*    id="password"*/}
+                            {/*    autoComplete="current-password"*/}
+                            {/*    helperText={LoginMsg !== '' ? LoginMsg:""}*/}
+                            {/*/>*/}
+                            <Password ID="password" Name="password" Label={t('Login.Password')} ErrorMsg={LoginMsg} />
                             <FormControlLabel
                                 control={<Checkbox  value="remember" color="primary" />}
                                 label={t('Login.Remember')}
