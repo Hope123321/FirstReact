@@ -13,6 +13,7 @@ import { UserProvider } from "./contexts/UserContext";
 import { Counter } from "./pages/counter";
 
 function App() {
+    console.log('env', process.env);
     return (
         
         <Router>
